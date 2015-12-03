@@ -19,19 +19,19 @@ var bearSprite = cc.Sprite.extend({
 	addEventListener: function() {
 		var that = this;
 		this.touchListener = cc.EventListener.create({
-			event: cc.EventListener.MOUSE,
+			event: cc.EventListener.TOUCH_ONE_BY_ONE,
 			//			swallowTouches: true,
 			//			onMouseDown: function(event) {
 			//				this.x1 = event.getLocation();
 			//				var target = event.getCurrentTarget();
 			//				console.log(this.x1);
 			//			},
-			onMouseUp: function(event) {
+			onTouchBegan: function(touch,event) {
 				//console.log(typeof(that.speed));
 				var target = event.getCurrentTarget();
 				target.stopAllActions();
 				this.x1 = target;
-				this.x2 = event.getLocation();
+				this.x2 = touch.getLocation();
 				//console.log(this.x2);
 				var xx = this.x1.x - this.x2.x;
 				//this.speed = 400;

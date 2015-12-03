@@ -315,6 +315,7 @@ var playLayer = cc.Layer.extend({
 			//			for (var i = 0; i < this.Sprites.length; i++) {
 			//				this.Sprites[i].stopAction(move);
 			//			}
+			this.removeTouchEventListenser();//移除监听
 			this.gameOver();
 		}
 	},
