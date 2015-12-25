@@ -2,7 +2,7 @@ cc.game.onStart = function() {
 	if (!cc.sys.isNative && document.getElementById("cocosLoading")) //If referenced loading.js, please remove it
 		document.body.removeChild(document.getElementById("cocosLoading"));
 
-	cc.view.setDesignResolutionSize(420, 747, cc.ResolutionPolicy.SHOW_ALL);
+	cc.view.setDesignResolutionSize(420, 747, cc.ResolutionPolicy.FIXED_WIDTH);
 	cc.view.resizeWithBrowserSize(true);
 
 	//load resources
