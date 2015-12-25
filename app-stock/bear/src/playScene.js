@@ -70,9 +70,14 @@ var playLayer = cc.Layer.extend({
 
 		var winsize = cc.director.getWinSize();
 		this.timeLabel = new cc.LabelTTF(this.time + " 秒", "Times New Roman", 20);
-		this.timeLabel.x = winsize.width - 30,
-			this.timeLabel.y = winsize.height - 30,
+		this.timeLabel.x = winsize.width - 30;
+			this.timeLabel.y = winsize.height - 30;
 			this.addChild(this.timeLabel, 3);
+		var iconScore=new cc.Sprite(score_png);
+		    iconScore.x=30;
+		    iconScore.y=winsize.height-30;
+		    this.addChild(iconScore,3);
+		
 		this.schedule(this.timeOut, 1, this.time, 1);
 		this.schedule(this.Check, 0.5, 1000 * 1024, 1);
 		//this.schedule(this.flagCheck, 0.25, 1000 * 1024, 1);

@@ -1,5 +1,4 @@
 var startBackground="res/startBackground.png";
-var bear_png="res/bear.png";
 var playBg="res/playBG.png";
 var rank_png="res/rank.png";
 var ruleText="res/rule-content.png";
@@ -16,6 +15,7 @@ var loading_bee_png="res/loading_bee.png";
 var loading_bear_png="res/loading_bear.png";
 var eyesocket_png="res/eye_socket.png";
 var eyeball_png="res/eye_ball.png";
+var score_png="res/score.png";
 var g_resources = [
 	//image
 
@@ -36,7 +36,8 @@ var g_resources = [
      loading_bear_png,
      loading_bee_png,
      eyesocket_png,
-     eyeball_png
+     eyeball_png,
+     score_png
 	//fnt
 
 	//tmx
