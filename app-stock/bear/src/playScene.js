@@ -376,20 +376,22 @@ var playLayer = cc.Layer.extend({
 		gameOverLayer.addChild(overSprite, 1);
 
 		var again = new cc.MenuItemImage("#again.png", "#again.png", function() {
-			this.sendScore();
+			
 			cc.director.runScene(new playScene());
 		}, this);
 		again.attr({
-			x: -(gameOverLayer.width - overSprite.width) / 2 - 10,
-			y: 15
+			x: -(gameOverLayer.width - overSprite.width) / 2-80 ,
+			y: -10,
+			scale:1.3
 		});
 		var gameover = new cc.MenuItemImage("#gameOver.png", "#gameOver.png", function() {
-			this.sendScore();
+			
 			cc.director.runScene(new startScene());
 		}, this);
 		gameover.attr({
-			x: (gameOverLayer.width - overSprite.width) / 2 + 10,
-			y: 15
+			x: (gameOverLayer.width - overSprite.width) / 2+80 ,
+			y: -10,
+			scale:1.3
 		});
 		var overMenu = new cc.Menu(again, gameover);
 
@@ -397,14 +399,14 @@ var playLayer = cc.Layer.extend({
 		overMenu.x = gameOverLayer.width / 2;
 		gameOverLayer.addChild(overMenu, 1);
 
-		var text = new cc.LabelTTF("你已获得" + this.scroe + "分", "Times New Roman", 20);
+		var text = new cc.LabelTTF("你已获得" + this.scroe + "分", "Times New Roman", 26);
 		text.attr({
 			x: overSprite.width / 2,
 			y: overSprite.height / 2 + 30
 		});
 		text.setFontFillColor(cc.color(0, 0, 0));
 		overSprite.addChild(text, 1);
-
+          this.sendScore();
 	},
 	createExplode: function() { //爆炸效果动画
 		var frames = [];

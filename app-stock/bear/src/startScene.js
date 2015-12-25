@@ -103,14 +103,14 @@ var startLayer = cc.Layer.extend({
          
 		for (var i in callbackJson) {
 			if (i < 10) {
-				callbackJsonName[i]= new cc.LabelTTF("" + callbackJson[i].nick_name, "Thonburi", 16);
-				callbackJsonName[i].x = 140;
-				callbackJsonName[i].y = (rank.height - 75) - i * 30;
+				callbackJsonName[i]= new cc.LabelTTF("" + callbackJson[i].nick_name, "Thonburi", 18);
+				callbackJsonName[i].x = 170;
+				callbackJsonName[i].y = (rank.height - 100) - i * 35;
 				callbackJsonName[i].setFontFillColor(cc.color(0, 0, 0));
 				rank.addChild(callbackJsonName[i], 5);
-				callbackJsonScore[i] = new cc.LabelTTF("" + callbackJson[i].score, "Thonburi", 16);
-				callbackJsonScore[i].x = 220;
-				callbackJsonScore[i].y = (rank.height - 75) - i * 30;
+				callbackJsonScore[i] = new cc.LabelTTF("" + callbackJson[i].score, "Thonburi", 18);
+				callbackJsonScore[i].x = 270;
+				callbackJsonScore[i].y = (rank.height - 100) - i * 35;
 				callbackJsonScore[i].setFontFillColor(cc.color(0, 0, 0));
 				rank.addChild(callbackJsonScore[i], 5);
 			}
