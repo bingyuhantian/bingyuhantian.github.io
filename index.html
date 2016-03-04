@@ -8,12 +8,90 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta content="telephone=no" name="format-detection">
 		<title>bingyuhantian</title>
-		
+		<style type="text/css">
+			body ul{
+			     	padding: 0;
+			     	margin: 0;
+			     	font-family: "微软雅黑";
+			     	font-size: 14px;
+			     	color:#333;
+			     	list-style: none;
+			     }
+				.head{
+					width: 200px;
+					height: 200px;
+					border: 1px dotted #999;
+					margin: 0 auto;
+					margin-top: 50px;
+					background: url(img/touxiang.jpg) no-repeat;
+					background-size: 100% 100%;
+				}
+				.name{
+					width: 200px;
+					margin: 0 auto;
+					text-align: center;
+					font-size: 30px;
+					color: orange;
+					padding-top: 20px;
+				}
+				.container{
+					width: 1000px;
+					border: 1px solid lightcoral;
+					margin: 50px auto;
+					/*min-height: 400px;*/
+				}
+				.container ul li{
+					/*border-bottom: 1px solid lightcoral;*/
+					min-height: 50px;
+					position: relative;
+				}
+				.container ul li span{
+					display: block;
+					line-height: 30px;
+				}
+				.container .title{
+					border-bottom: 1px dashed lightcoral;
+					line-height: 40px;
+					padding-left: 30px;
+					font-size: 22px;
+					background: lightblue;
+				}
+				.container .title a{
+					text-decoration: none;
+					color: #333;
+				}
+				.container .content{
+					line-height: 40px;
+					padding-left: 50px;
+					font-size: 18px;
+					color: #666;
+					position: relative;
+				}
+				.container li .date{
+					position: absolute;
+					bottom: 5px;
+					right: 10px;
+				}
+		</style>
 	</head>
 
 	<body>
-		<a href="http://bingyuhantian.github.io/app-stock/bear/index.html">一款cocos小游戏</a>
-		
+		<div class="head"></div>
+		<div class="name">冰雨寒天</div>
+		<div class="container">
+			<ul>
+				<li>
+					<span class="title">
+						<a href="http://bingyuhantian.github.io/app-stock/bear/index.html">
+						淘金的熊宝
+						</a>
+					</span>
+					<span class="content">一款cocos的小游戏</span>
+					<div class="date">2015.12.12</div>
+				</li>
+			</ul>
+		</div>
+
 	</body>
 
 </html>
